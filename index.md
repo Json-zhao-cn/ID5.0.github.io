@@ -14,3 +14,5 @@ title: Manufacturing Industry Digitalization
 - WMS System
 - ETL
 - Factory Digitalization
+
+You can add content below each heading or link to other pages like `/database`, `/dotnetcore`, etc.
