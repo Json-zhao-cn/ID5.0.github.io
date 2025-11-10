@@ -1,11 +1,6 @@
----
-layout: home
-title: Manufacturing Industry Digitalization
----
-
 ### Welcome to the Manufacturing Industry Digitalization blog
 
-**Weclome → Welcome** (fixed spelling)
+**Weclome**
 
 #### Topics
 - Database
