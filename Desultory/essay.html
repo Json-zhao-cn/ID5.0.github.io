@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Portfolio - Skills</title>
+    <!-- **IMPORTANT: Update the title for each page** -->
+    <title></title>
     <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Configure a nice font (Inter) and smooth transitions */
+        /* Configure a nice font (Inter) and smooth transitions - Keep CSS identical across all pages */
         :root {
             --primary-color: #3b82f6; /* Blue-500 */
             --secondary-color: #1f2937; /* Gray-800 */
@@ -63,7 +64,7 @@
 
     <div class="main-grid md:grid md:min-h-screen shadow-2xl max-w-7xl mx-auto my-4 rounded-xl overflow-hidden">
 
-        <!-- LEFT SIDEBAR: Personal Profile & Contact Info (Shared across all pages) -->
+        <!-- LEFT SIDEBAR: Personal Profile & Contact Info (This section is copied exactly from index.html) -->
         <aside class="sidebar h-full">
             <div class="text-center md:sticky md:top-0 md:pt-8">
                 <!-- Icon Picture / Avatar -->
@@ -107,61 +108,44 @@
             </div>
         </aside>
 
-        <!-- RIGHT CONTENT: Navigation and Skills Content -->
+        <!-- RIGHT CONTENT: Navigation and Dynamic Content -->
         <main class="content-area min-h-full">
             <header class="mb-8">
-                <!-- Navigation links point to the root index.html and files in subfolders -->
+                <!-- Navigation links must use relative paths based on the root folder structure -->
                 <nav id="nav-links" class="flex flex-wrap gap-4 p-2 bg-gray-50 rounded-xl shadow-md">
-                    <a href="index.html" id="nav-skill" class="tab-button">Skills</a>
-                    <a href="Experience/experience.html" id="nav-experience" class="tab-button">Manufacture Experience</a>
-                    <a href="Desultory/essay.html" id="nav-essay" class="tab-button">Desultory Essay</a>
+                    <a href="../index.html" id="nav-skill" class="tab-button">Skills</a>
+                    <a href="../Experience/experience.html" id="nav-experience" class="tab-button">Manufacture Experience</a>
+                    <a href="../Desultory/essay.html" id="nav-essay" class="tab-button">Desultory Essay</a>
                 </nav>
             </header>
 
-            <!-- 1. SKILLS Content -->
-            <section id="skill-content">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 pb-2">Technical Skills & Expertise</h2>
+            <!-- 
+                ==========================================================
+                *** PASTE YOUR CONVERTED HTML CONTENT HERE ***
                 
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Core Development</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">.NET Core</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">ASP.NET Web API</span>
-                        <span class="skill-tag">Azure Services</span>
-                        <span class="skill-tag">Microservices Architecture</span>
-                        <span class="skill-tag">Docker/Kubernetes</span>
-                        <span class="skill-tag">Test-Driven Development (TDD)</span>
-                    </div>
-                </div>
+                If this is 'experience.html', paste your Manufacturing Experience content.
+                If this is 'essay.html', paste your Desultory Essay content.
+                ==========================================================
+            -->
+            <section id="content">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 pb-2">[Section Title: E.g., Domain Expertise: Manufacturing]</h2>
+                
+                <p class="text-lg text-gray-600 mb-4">This content should be replaced with the HTML converted from your original Markdown file (e.g., topic.md).</p>
 
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Data & Integration</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">SQL Server</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">ETL/ELT Processes</span>
-                        <span class="skill-tag">Data Warehousing</span>
-                        <span class="skill-tag">Data Modeling</span>
-                        <span class="skill-tag">NoSQL (MongoDB)</span>
+                <!-- Example Structure for Manufacture Experience -->
+                <!-- 
+                <div class="space-y-6">
+                    <div class="border p-4 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Warehouse Management Systems (WMS)</h3>
+                        <p class="text-gray-600">This is the detailed explanation for WMS...</p>
                     </div>
                 </div>
-
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Front-End & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">JavaScript/TypeScript</span>
-                        <span class="skill-tag">React (Basics)</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">Jira/Agile Methodologies</span>
-                    </div>
-                </div>
+                -->
             </section>
         </main>
     </div>
 
-    <!-- Link to the external JavaScript file -->
-    <script src="Script/Indextheme.js"></script>
+    <!-- Link to the external JavaScript file. Note the relative path: '../' jumps up one folder level. -->
+    <script src="../Script/Indextheme.js"></script>
 </body>
 </html>
