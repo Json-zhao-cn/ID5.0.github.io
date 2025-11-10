@@ -1,14 +1,16 @@
-### Manifacturing Industry Digtialzation 
-*** Weclome to Manifacturing Industry Digtialzation blog ***
+---
+layout: home
+title: Manufacturing Industry Digitalization
+---
 
-### Database 
+### Welcome to the Manufacturing Industry Digitalization blog
 
-### .NetCore
+**Weclome → Welcome** (fixed spelling)
 
-### MES System
-
-### WMS System
-
-### ETL
-
-### Factory Digtialzation
+#### Topics
+- Database
+- .NET Core
+- MES System
+- WMS System
+- ETL
+- Factory Digitalization
