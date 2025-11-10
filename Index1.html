@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio - [Your Name]</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configure a nice font (Inter) and smooth transitions */
+        :root {
+            --primary-color: #3b82f6; /* Blue-500 */
+            --secondary-color: #1f2937; /* Gray-800 */
+            --background-color: #f3f4f6; /* Gray-100 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            min-height: 100vh;
+        }
+        .sidebar {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1.5rem;
+        }
+        .content-area {
+            background-color: white;
+            padding: 1.5rem;
+        }
+        .tab-button {
+            transition: all 0.2s ease-in-out;
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+        .tab-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .tab-button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .skill-tag {
+            background-color: #d1d5db; /* Gray-300 */
+            color: #1f2937; /* Gray-800 */
+            border-radius: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin: 0.25rem;
+            display: inline-block;
+        }
+
+        /* Responsive Layout: On small screens (mobile), the sidebar is full width at the top */
+        @media (min-width: 768px) {
+            .main-grid {
+                grid-template-columns: 300px 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="main-grid md:grid md:min-h-screen shadow-2xl max-w-7xl mx-auto my-4 rounded-xl overflow-hidden">
+
+        <!-- LEFT SIDEBAR: Personal Profile & Contact Info -->
+        <aside class="sidebar h-full">
+            <div class="text-center md:sticky md:top-0 md:pt-8">
+                <!-- Icon Picture / Avatar -->
+                <img id="profile-icon" src="https://placehold.co/150x150/1f2937/ffffff?text=Your+Icon" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/150x150/1f2937/ffffff?text=Icon';" 
+                     alt="Profile Icon" 
+                     class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white object-cover shadow-lg">
+                
+                <h1 class="text-3xl font-bold mb-1">Jane Doe</h1>
+                <p class="text-lg font-light text-gray-300 mb-6">Software Architect & Industry 4.0 Enthusiast</p>
+
+                <!-- Personal Profile -->
+                <div class="text-left bg-gray-700/50 p-4 rounded-xl mb-6 shadow-inner">
+                    <h3 class="text-xl font-semibold mb-2 border-b border-gray-500 pb-1">Profile Summary</h3>
+                    <p class="text-sm text-gray-200 leading-relaxed">
+                        Highly motivated developer with 10+ years of experience specializing in manufacturing solutions and digital transformation. Proven expertise in architecting scalable solutions using the .NET ecosystem and modern SQL technologies. Passionate about applying technology to solve complex industrial challenges.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="text-left space-y-3">
+                    <h3 class="text-xl font-semibold mb-3 border-b border-gray-500 pb-1">Contact Details</h3>
+                    <div class="flex items-center space-x-3 text-sm">
+                        <!-- Email Icon (using inline SVG for simplicity/no external fonts) -->
+                        <svg class="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:jane.doe@example.com" class="hover:text-blue-300">jane.doe@example.com</a>
+                    </div>
+                    <div class="flex items-center space-x-3 text-sm">
+                        <!-- Phone Icon -->
+                        <svg class="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="flex items-start space-x-3 text-sm">
+                        <!-- Address Icon -->
+                        <svg class="w-5 h-5 mt-0.5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <p>123 Tech Park Ave, Innovation City, CA 90210</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- RIGHT CONTENT: Tabs and Dynamic Content -->
+        <main class="content-area min-h-full">
+            <header class="mb-8">
+                <nav class="flex flex-wrap gap-4 p-2 bg-gray-50 rounded-xl shadow-md">
+                    <button class="tab-button active" onclick="showContent('skill')">Skills</button>
+                    <button class="tab-button" onclick="showContent('experience')">Manufacture Experience</button>
+                    <button class="tab-button" onclick="showContent('essay')">Desultory Essay</button>
+                </nav>
+            </header>
+
+            <!-- 1. SKILLS Content -->
+            <section id="skill-content" class="tab-content">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 pb-2">Technical Skills & Expertise</h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Core Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">ASP.NET Web API</span>
+                        <span class="skill-tag">Azure Services</span>
+                        <span class="skill-tag">Microservices Architecture</span>
+                        <span class="skill-tag">Docker/Kubernetes</span>
+                        <span class="skill-tag">Test-Driven Development (TDD)</span>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Data & Integration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">ETL/ELT Processes</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">NoSQL (MongoDB)</span>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Front-End & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">JavaScript/TypeScript</span>
+                        <span class="skill-tag">React (Basics)</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Jira/Agile Methodologies</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. MANUFACTURE EXPERIENCE Content -->
+            <section id="experience-content" class="tab-content hidden">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 pb-2">Domain Expertise: Manufacturing</h2>
+                
+                <div class="space-y-6">
+                    <div class="border p-4 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Warehouse Management Systems (WMS)</h3>
+                        <p class="text-gray-600">Extensive experience in designing and integrating WMS solutions (receiving, putaway, picking, packing, shipping). Focused on optimizing logistics flow and inventory accuracy across multiple sites.</p>
+                    </div>
+
+                    <div class="border p-4 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Manufacturing Execution Systems (MES)</h3>
+                        <p class="text-gray-600">Architected and deployed MES modules for real-time production monitoring, quality control, and genealogy tracking. Specialized in connecting shop floor data (SCADA/PLCs) to enterprise resource planning (ERP) systems.</p>
+                    </div>
+                    
+                    <div class="border p-4 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Digital Transformation Initiatives</h3>
+                        <p class="text-gray-600">Led multiple projects focused on digitizing manual processes, implementing IoT devices for machine data collection, and creating actionable dashboards for leadership to drive operational excellence.</p>
+                    </div>
+
+                    <div class="border p-4 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Industry 4.0 & IIoT</h3>
+                        <p class="text-gray-600">Familiarity with standards and protocols for secure data acquisition in industrial environments, ensuring scalable and reliable data infrastructure for advanced analytics.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. DESULTORY ESSAY Content -->
+            <section id="essay-content" class="tab-content hidden">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 pb-2">Desultory Essays & Thoughts</h2>
+                
+                <article class="mb-8 p-6 border rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-3">The Quiet Revolution of Low-Code Platforms</h3>
+                    <p class="text-sm text-gray-500 mb-4">Published on: October 25, 2025</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        In the race toward digital maturity, the focus often lies on complex, bespoke solutions. However, the true transformation in the manufacturing sector is quietly being driven by low-code and no-code platforms. These tools are democratizing application development, allowing subject matter experts—the engineers and line supervisors—to build the tools they need most, without waiting for the centralized IT backlog. This shift doesn't replace core development; rather, it frees up senior architects to focus on the high-value, complex systems that truly require deep technical expertise, thereby accelerating the overall pace of innovation...
+                    </p>
+                    <a href="#" class="mt-4 inline-block text-blue-600 font-medium hover:text-blue-800">Read More &rarr;</a>
+                </article>
+
+                <article class="mb-8 p-6 border rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-3">Why Technical Debt Isn't Always a Bad Thing</h3>
+                    <p class="text-sm text-gray-500 mb-4">Published on: September 1, 2025</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        The term "technical debt" is often used as a pejorative, suggesting failure or poor quality. But in a fast-moving business environment, strategic technical debt—incurred knowingly to capture market share or validate a critical hypothesis—can be a powerful tool. The key distinction lies in management and planning. Like financial debt, unmanaged technical debt accrues crippling interest, but a carefully planned, short-term architectural shortcut can be the difference between leading the pack and being left behind. The crucial step is establishing a "debt repayment schedule" before the code is even written...
+                    </p>
+                    <a href="#" class="mt-4 inline-block text-blue-600 font-medium hover:text-blue-800">Read More &rarr;</a>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        /**
+         * Simple JavaScript to handle tab switching
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure the first tab is visible on load, just in case
+            showContent('skill');
+        });
+
+        function showContent(contentId) {
+            // Hide all content sections
+            document.querySelectorAll('.tab-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Deactivate all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the requested content section
+            const activeSection = document.getElementById(contentId + '-content');
+            if (activeSection) {
+                activeSection.classList.remove('hidden');
+            }
+
+            // Activate the corresponding button
+            const activeButton = document.querySelector(`.tab-button[onclick="showContent('${contentId}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
